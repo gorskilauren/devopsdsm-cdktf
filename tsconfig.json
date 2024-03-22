@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "esModuleInterop": true,
+      "outDir": "dist",
+      "module": "commonJS",
+      "target": "ES6",
+      "typeRoots": ["./node_modules/@types"],
+      "types": ["node"],
+      "declaration": true,
+    },
+    "exclude": ["cdk.out/**", "cdk.json", "test", "dist", "scripts"]
+  }
+  

@@ -1,0 +1,8 @@
+cdktf.out
+cdk.context.json
+terraform.*
+.tfstate
+node_modules
+cdk.out
+.env
+.terraform.*

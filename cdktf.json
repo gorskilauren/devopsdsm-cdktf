@@ -1,0 +1,5 @@
+{
+    "language": "typescript",
+    "app": "npx ts-node subdomains/cdktf/index.ts",
+    "projectId": "13e66f32-4a73-4270-8a49-39501348c93f"
+}

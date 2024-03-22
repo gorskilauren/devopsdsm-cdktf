@@ -1,0 +1,31 @@
+{
+  "scripts": {
+    "aws-cdk:destroy": "AWS_PROFILE=devopsdsm-sandbox DEMO=false cdk deploy AwsCDKHostedZonesStack && AWS_PROFILE=devopsdsm-prod cdk destroy AwsCdkRoute53RoleStack",
+    "aws-cdk:deploy": "AWS_PROFILE=devopsdsm-prod cdk deploy AwsCdkRoute53RoleStack && AWS_PROFILE=devopsdsm-sandbox DEMO=true cdk deploy AwsCDKHostedZonesStack",
+    "cdktf:destroy": "cdktf destroy CdktfHostedZonesStack",
+    "cdktf:plan": "cdktf plan CdktfHostedZonesStack",
+    "cdktf:deploy": "cdktf deploy CdktfHostedZonesStack",
+    "reset-demo": "npm run cdktf:destroy",
+    "lint": "prettier --check src",
+    "lint-fix": "prettier --write subdomains what-is-cdktf"
+  },
+  "dependencies": {
+    "@cdktf/provider-aws": "^19.10.0",
+    "@cdktf/provider-cloudflare": "^11.4.0",
+    "@cdktf/provider-okta": "^13.2.0",
+    "@types/node": "^20.11.29",
+    "aws-cdk": "^2.133.0",
+    "aws-cdk-lib": "^2.133.0",
+    "cdktf": "^0.20.5",
+    "cdktf-cli": "^0.20.5",
+    "dotenv": "^16.4.5",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  },
+  "prettier": {
+    "bracketSameLine": true,
+    "singleQuote": true,
+    "trailingComma": "none"
+  }
+}
